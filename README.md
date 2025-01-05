@@ -1,4 +1,4 @@
-![logo](/Users/shawnlong/Repos/Personal/mini-ftp/assets/logo.png)
+![logo](https://github.com/emmabyte/mini-ftp/blob/main/assets/logo.png?raw=true)
 
 # mini-ftp
 
