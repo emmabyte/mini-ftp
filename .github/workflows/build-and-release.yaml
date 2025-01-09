@@ -108,10 +108,13 @@ jobs:
 
             - name: Build and Push Docker Image
               run: |
+                  echo "Building image with version: ${VERSION}"
                   docker buildx build --push \
                     --platform linux/amd64,linux/arm64 \
                     --tag ${{ env.IMAGE_NAME }}:${{ env.VERSION }} \
                     .
+              env:
+                  VERSION: ${{ env.VERSION }} # Ensure VERSION is passed as an environment variable
 
             - name: Cleanup Old Docker Images
               run: |
