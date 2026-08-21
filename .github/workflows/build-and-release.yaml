@@ -93,6 +93,7 @@ jobs:
                           --platform $PLATFORMS \
                           --tag ${{ env.IMAGE_NAME }}:$VERSION-$TAG_SUFFIX \
                           --build-arg ALPINE_VERSION=$version .
+                  done
 
             - name: Build and Push Images to GitHub Container Registry
               run: |
@@ -117,6 +118,7 @@ jobs:
                           --platform $PLATFORMS \
                           --tag ${{ env.GHCR_IMAGE_NAME }}:$VERSION-$TAG_SUFFIX \
                           --build-arg ALPINE_VERSION=$version .
+                  done
 
             - name: Create GitHub Release
               uses: actions/create-release@v1
